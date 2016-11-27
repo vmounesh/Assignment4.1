@@ -1,0 +1,31 @@
+package pkg1;
+
+public class ProtectedExample {
+	
+	protected static String color;
+	protected void display()
+	{
+		System.out.println("Display Protected method");
+	}
+
+}
+
+
+////////////////////////////////////////////////////////////
+
+package pkg2;
+
+// Accessing/Importing the package from pkg1 
+import pkg1.ProtectedExample;
+
+public class ProtectedExampleDemo extends ProtectedExample{
+	
+	
+	public static void main(String[] args) {
+		ProtectedExampleDemo demo= new ProtectedExampleDemo();
+		demo.display(); //protected method is called here
+		System.out.println("Accessing the protected variable " +color);
+				
+	}
+
+}
